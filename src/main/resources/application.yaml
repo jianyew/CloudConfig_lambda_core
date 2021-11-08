@@ -1,0 +1,17 @@
+server:
+  port: 80
+logging:
+  level:
+    root: INFO
+spring:
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: true
+
+aws:
+  config:
+    region: ap-southeast-1
+    account: 964479626419
+    iotdomain: a1w6jnzc1m4aj1-ats.iot.ap-southeast-1.amazonaws.com
+    certificatebucket: cconfig-certificate
+

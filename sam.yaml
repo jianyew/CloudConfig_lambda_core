@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: AWS Serverless Spring Boot 2 API - com.jw.demo.app::CloudConfig_lambda_core
+Globals:
+  Api:
+    EndpointConfiguration: REGIONAL
+
+Resources:
+  MyDomeLambdaAppCoreFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: com.jw.demo.app.StreamLambdaHandler::handleRequest
+      Runtime: java8
+      CodeUri: target/CloudConfig_lambda_core-1.0-SNAPSHOT-lambda-package.zip
+      MemorySize: 1024
+      Role: arn:aws:iam::964479626419:role/iot_lambda_role
+      Timeout: 900
+      Events:
+        GetResource:
+          Type: Api
+          Properties:
+            Path: /{proxy+}
+            Method: any
+
+Outputs:
+  MydemoLambdaAppCoreApi:
+    Description: URL for application
+    Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod'
+    Export:
+      Name: MydemoLambdaAppCoreApi
