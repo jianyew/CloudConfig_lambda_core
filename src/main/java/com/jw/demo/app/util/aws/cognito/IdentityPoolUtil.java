@@ -30,7 +30,7 @@ public class IdentityPoolUtil {
         //这个是 身份池  -->身份浏览器 ———> 点击身份ID 进入  ———>  对应 开发人员标识符 的值
         String identifier = "zyj_test1111";//
 
-        //获取cognito 的令牌  "mytest" 是我们的开发者提供名称 不能变
+        //获取cognito 的令牌  "mytest"
         GetOpenIdTokenForDeveloperIdentityResult token = getOpenIdTokenForDeveloperIdentity(identityPoolId, "mytest", identifier, tokenDuration);
         System.err.println("token====="+token.getToken());
         //获取 用户临时凭证(有效时间会返回，但是无法设置)
