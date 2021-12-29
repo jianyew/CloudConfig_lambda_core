@@ -1,3 +1,6 @@
+
+blog ： https://aws.amazon.com/cn/blogs/china/smart-home-iot-platform-module-distribution-network/
+
 打包
 安装配置 AWS CLI
 安装
