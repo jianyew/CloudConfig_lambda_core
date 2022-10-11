@@ -1,5 +1,20 @@
 
 
+当客户购买设备回家，第一件事就是配网，
+所以配网是所有物理网公司和客户建立Link的第一步， 
+我们来看看如何在亚马逊云上构建设备配网。
+Blog:https://aws.amazon.com/cn/blogs/china/smart-home-iot-platform-module-distribution-network/
+
+**配网流程**
+![](images/Picture1.png)
+
+
+**架构图**
+![](images/img5.png)
+
+API调用流程图
+![](images/Picture3.png)
+
 **1.打包**
 安装配置 AWS CLI
 
@@ -32,3 +47,4 @@ aws cloudformation describe-stacks --stack-name cloudconfig-mydemo-app --region=
 
 
 
+![](images/Picture4.png)
